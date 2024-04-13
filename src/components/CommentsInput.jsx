@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 
-function CommentsInput() {
+function CommentsInput(props) {
     const [newComment, setNewComment] = useState("");
 
     function storeComment(event) {
         setNewComment(event.target.value);
+        console.log(props)
     }
-    function clearArea(){
-        setNewComment("")
-    }
-    return (
+    return(
         <div className="commentsInput">
             <textarea value={newComment} onChange={storeComment} />
-            <button onClick={clearArea}>Post</button>
+            <button onClick={()=>props.toSaveComment(newComment)}>Post</button>
         </div>
-    );
+    )
 }
 
 export default CommentsInput;

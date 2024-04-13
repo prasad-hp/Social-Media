@@ -1,17 +1,16 @@
 import React from "react";
 import ImageHeading from "./ImageHeading";
-import LikeAndComment from "./LikeAndComment";
-import CommentsInput from "./CommentsInput";
+import Comments from "./Comments";
+import LikeCommentIcons from "./LikeCommentIcons";
 
 function ImageCard(){
     return(
         <div className="imageCard">
             <ImageHeading />
             <img src="../images/profile-photos/prasadhp.jpeg" className="imageOnCard"/>
-            <LikeAndComment />
-            <CommentsInput />
+            <LikeCommentIcons />
+            <Comments />
         </div>
     )
 }
-
-export default ImageCard;
+export default ImageCard;   

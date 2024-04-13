@@ -4,7 +4,7 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 
 
-function LikeAndComment (){
+function LikeCommentIcons (){
     const [like, setLike] = useState(false)
     const [likeCount, setLikeCount] = useState(10)
 
@@ -13,7 +13,6 @@ function LikeAndComment (){
         like ? setLikeCount(likeCount-1) : setLikeCount(likeCount+1)
     }
     function commentButtonClick(){
-
     }
     
     return(
@@ -25,4 +24,4 @@ function LikeAndComment (){
     )
 }
 
-export default LikeAndComment;
+export default LikeCommentIcons;
