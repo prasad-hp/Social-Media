@@ -10,7 +10,8 @@ function CommentsInput(props) {
     return(
         <div className="commentsInput">
             <textarea value={newComment} onChange={storeComment} />
-            <button onClick={()=>props.toSaveComment(newComment)}>Post</button>
+            <button onClick={()=>{props.toSaveComment(newComment)
+                setNewComment("")}}>Post</button>
         </div>
     )
 }
