@@ -81,7 +81,8 @@ button:focus-visible {
 }
 
 .imageCard{
-  width: 20vw;
+  min-width: 400px;
+  max-width: 400px;
   padding: 2.5vw;
   background-color: antiquewhite;
 }
@@ -96,8 +97,15 @@ button:focus-visible {
 
 .imageOnCard{
   border-radius: 10px;
+  width: 400px;
 }
 
 .commentsInput {
   display: flex;
+}
+.commentsList{
+  text-align: left;
+}
+.commentsListed {
+  background-color: white;
 }
