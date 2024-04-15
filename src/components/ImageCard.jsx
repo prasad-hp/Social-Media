@@ -8,7 +8,7 @@ function ImageCard(props){
             <ImageHeading 
                 userPost={props.userPost}
             />
-            <img src={`../../images/${props.userPost.userName}/photos/${props.userPost.photo}.jpg`} className="imageOnCard"/>
+            <img src={`../../images/photos/${props.userPost.photo}.jpg`} className="imageOnCard"/>
             <LikeCommentIcons 
                 userPost={props.userPost}
             />
