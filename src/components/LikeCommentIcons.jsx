@@ -5,11 +5,12 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import CommentsList from "./CommentsList";
 
 
-function LikeCommentIcons (){
+
+
+function LikeCommentIcons (props){
     const [like, setLike] = useState(false);
-    const [likeCount, setLikeCount] = useState(10);
+    const [likeCount, setLikeCount] = useState(props.userPost.likes);
     const [showComments, setShowComments] = useState(false);
-    // const [storeComment, setStoreComment] = useState([]);
 
     function likeButtonClick(){
         setLike(!like)
@@ -19,15 +20,11 @@ function LikeCommentIcons (){
         setShowComments(!showComments)
     }
 
-    // function saveComment(newComment) {
-    //     setStoreComment([...comments, newComment ])
-    // }
-    
     return(
         <div>
             <button onClick={likeButtonClick}> { like ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon /> } {likeCount}</button>
             <button onClick={commentButtonClick}> <ChatBubbleOutlineIcon /></button>
-            {showComments && <CommentsList /> }
+            {showComments && <CommentsList userPost={props.userPost}/> }
         </div>
     )
 }

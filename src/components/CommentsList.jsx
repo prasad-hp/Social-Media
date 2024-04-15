@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CommentsInput from "./CommentsInput";
 
-function CommentsList(){
-    const [comments, setComments] = useState(["Monkey D'luffy"]);
+function CommentsList(props){
+    const [comments, setComments] = useState(props.userPost.comments);
 
     function saveComment(newComment){
         if(newComment===""){
@@ -11,7 +11,6 @@ function CommentsList(){
             setComments(prevComment => {
                 return [...prevComment, newComment];
             });
-            console.log(comments)
         }
     }
     return (

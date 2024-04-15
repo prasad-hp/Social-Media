@@ -1,15 +1,18 @@
 import React from "react";
 import ImageHeading from "./ImageHeading";
 import LikeCommentIcons from "./LikeCommentIcons";
-import Luffy from "../../images/photos/luffy.jpg"
 
-function ImageCard(){
+function ImageCard(props){
     return(
         <div className="imageCard">
-            <ImageHeading />
-            <img src={Luffy} className="imageOnCard"/>
-            <LikeCommentIcons />
+            <ImageHeading 
+                userPost={props.userPost}
+            />
+            <img src={`../../images/${props.userPost.userName}/photos/${props.userPost.photo}.jpg`} className="imageOnCard"/>
+            <LikeCommentIcons 
+                userPost={props.userPost}
+            />
         </div>
     )
 }
-export default ImageCard;   
+export default ImageCard;

@@ -1,11 +1,10 @@
 import React from "react";
-import ProfilePhoto from "../../images/profile-photos/prasadhp.jpeg"
 
-function ImageHeading(){
+function ImageHeading(props){
     return(
         <div className="imageHeading">  
-            <img src={ProfilePhoto} className="profilePhotoOnCard"/>
-            <h3 className="nameOnCard">Prasad Hp</h3>
+            <img src={`../../images/${props.userPost.userName}/profile-photo/${props.userPost.userName}.jpg`} className="profilePhotoOnCard"/>
+            <h3 className="nameOnCard">{props.userPost.name}</h3>
         </div>
     )
 }

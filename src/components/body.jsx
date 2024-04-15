@@ -1,20 +1,20 @@
 import React from "react";
 import ImageCard from "./ImageCard";
-import userData from "../data";
+import userPosts from "../data";
 
 
 function Body(){
+    const imagePosts = userPosts.map((userPost)=>{
+        return(
+            <ImageCard 
+            key={userPost.id}
+            userPost={userPost}/>
+        )
+    })
 
     return (
         <div className="body">
-            <ImageCard />
-            {userData.map((post)=>{
-                <ImageCard 
-                   name={userData[0].name}
-                   userName={userData[0].userName}
-
-                />
-            })}
+            {imagePosts}
         </div>
     )
 }
