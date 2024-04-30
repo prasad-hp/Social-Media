@@ -23,7 +23,7 @@ function LikeCommentIcons (props){
     return(
         <div className="align-top w-full px-4">
             <div className="flex justify-start ">
-                <button onClick={likeButtonClick} className="pr-5"> { like ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon /> } {likeCount}</button>
+                <button onClick={likeButtonClick} className="pr-5"> { like ? <FavoriteOutlinedIcon className="h-10"/> : <FavoriteBorderOutlinedIcon /> } {likeCount}</button>
                 <button onClick={commentButtonClick}> <ChatBubbleOutlineIcon /></button>
             </div>
                 <div>
