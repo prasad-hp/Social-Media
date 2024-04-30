@@ -4,9 +4,6 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import CommentsList from "./CommentsList";
 
-
-
-
 function LikeCommentIcons (props){
     const [like, setLike] = useState(false);
     const [likeCount, setLikeCount] = useState(props.userPost.likes);
