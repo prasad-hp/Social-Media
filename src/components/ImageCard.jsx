@@ -4,7 +4,7 @@ import LikeCommentIcons from "./LikeCommentIcons";
 
 function ImageCard(props){
     return(
-        <div className="flex flex-col items-center lg:w-full bg-gray-100 m-4 rounded-md">
+        <div className="flex flex-col items-center lg:w-full bg-gray-100 mb-4 rounded-md">
                 <ImageHeading
                     userPost={props.userPost}
                 />

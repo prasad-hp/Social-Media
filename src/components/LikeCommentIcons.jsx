@@ -21,10 +21,14 @@ function LikeCommentIcons (props){
     }
 
     return(
-        <div>
-            <button onClick={likeButtonClick}> { like ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon /> } {likeCount}</button>
-            <button onClick={commentButtonClick}> <ChatBubbleOutlineIcon /></button>
-            {showComments && <CommentsList userPost={props.userPost}/> }
+        <div className="align-top w-full px-4">
+            <div className="flex justify-start ">
+                <button onClick={likeButtonClick} className="pr-5"> { like ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon /> } {likeCount}</button>
+                <button onClick={commentButtonClick}> <ChatBubbleOutlineIcon /></button>
+            </div>
+                <div>
+                    {showComments && <CommentsList userPost={props.userPost}/> }
+                </div>
         </div>
     )
 }

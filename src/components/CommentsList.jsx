@@ -14,9 +14,9 @@ function CommentsList(props){
         }
     }
     return (
-        <div className="commentsList">
+        <div className="w-full">
             <CommentsInput toSaveComment={saveComment} />
-            <div className="commentsListed">
+            <div className="w-full">
             {comments.map((comment, index) => (
                 <ul key={index}>
                     <li>{comment}</li>
