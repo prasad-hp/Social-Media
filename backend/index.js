@@ -1,11 +1,11 @@
 import express from "express"
-import userPosts from "./data.js";
+import userPosts from "./userPosts.js";
 const app = express()
 
 const port = 3000;
 
 app.get("/", (req, res)=>{
-    res.json(userPosts)
+    res.send(userPosts)
 })
 
 app.listen(port)
