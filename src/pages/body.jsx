@@ -7,19 +7,20 @@ function Body(){
 
     const imagePosts = userPosts.map((userPost)=>{
         return(
-            <div className="flex w-screen">
-                <div className="justify-center w-1/2 flex">
+                <div>
                     <ImageCard 
                     key={userPost.id}
                     userPost={userPost}/>
                 </div>
-            </div>
+
         )
     })
 
     return (
-        <div className="body">
-            {imagePosts}
+        <div className="flex w-screen justify-center">
+            <div className="lg:w-1/4 flex flex-col justify-center">
+                {imagePosts}
+            </div>
         </div>
     )
 }
