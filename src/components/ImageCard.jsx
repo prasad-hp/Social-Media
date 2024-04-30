@@ -4,13 +4,13 @@ import LikeCommentIcons from "./LikeCommentIcons";
 
 function ImageCard(props){
     return(
-        <div className="imageCard flex">
-            <div className="justify-center">    
+        <div className="flex flex-col justify-center lg:w-1/3">
+            <div className="justify-center items-center">    
                 <ImageHeading
                     userPost={props.userPost}
                 />
             </div>
-            <img src={`../../images/photos/${props.userPost.photo}.jpg`} className="imageOnCard"/>
+            <img src={`../../images/photos/${props.userPost.photo}.jpg`} className="w-10/12 justify-center"/>
             <LikeCommentIcons 
                 userPost={props.userPost}
             />
